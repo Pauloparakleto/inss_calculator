@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    inss_calculator (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,6 +54,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  inss_calculator!
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.21)
