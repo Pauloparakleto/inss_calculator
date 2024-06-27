@@ -1,5 +1,7 @@
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.2.2
+  Include:
+    - 'lib/**/*.rb'
 
 Style/StringLiterals:
   Enabled: true
