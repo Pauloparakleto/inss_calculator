@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "inss_calculator/version"
+require_relative 'inss_calculator/version'
 require_relative 'inss_calculator/discount_calculator_base'
 require_relative 'inss_calculator/discount_previdence_calculator'
 require_relative 'inss_calculator/first_discount_calculator'

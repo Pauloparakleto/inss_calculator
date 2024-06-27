@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-require_relative "lib/inss_calculator/version"
+require_relative 'lib/inss_calculator/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "inss_calculator"
+  spec.name = 'inss_calculator'
   spec.version = InssCalculator::VERSION
-  spec.authors = ["Paulo Felipe Souza"]
-  spec.email = ["alparakleto@gmail.com"]
+  spec.authors = ['Paulo Felipe Souza']
+  spec.email = ['alparakleto@gmail.com']
 
-  spec.summary = "Calculadora de desconto do INSS"
-  spec.description = "Calcula o valor a descontar de acordo com a faixa salarial. Os novos valores corrente em 2024."
-  spec.homepage = "https://github.com/Pauloparakleto/inss_calculator"
-  spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.summary = 'Calculadora de desconto do INSS'
+  spec.description = 'Calcula o valor a descontar de acordo com a faixa salarial. Os novos valores corrente em 2024.'
+  spec.homepage = 'https://github.com/Pauloparakleto/inss_calculator'
+  spec.license = 'MIT'
+  spec.required_ruby_version = '>= 2.6.0'
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/Pauloparakleto/inss_calculator"
-  spec.metadata["changelog_uri"] = "https://github.com/Pauloparakleto/inss_calculator/blob/main/CHANGELOG.md"
+  spec.metadata['homepage_uri'] = spec.homepage
+  spec.metadata['source_code_uri'] = 'https://github.com/Pauloparakleto/inss_calculator'
+  spec.metadata['changelog_uri'] = 'https://github.com/Pauloparakleto/inss_calculator/blob/main/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
       (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
