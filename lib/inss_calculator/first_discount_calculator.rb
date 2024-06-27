@@ -6,7 +6,7 @@ module InssCalculator
   class FirstDiscountCalculator < DiscountCalculatorBase
     QUOTATION = 0.075
     SALARY_BASE = 0.00
-    SALARY_LIMIT = 1045.00
+    SALARY_LIMIT = 1412.0
     FULL_CONTRIBUTION = ((SALARY_LIMIT - SALARY_BASE) * QUOTATION).truncate(2)
 
     def contribution

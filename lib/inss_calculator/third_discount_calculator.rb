@@ -5,8 +5,8 @@ module InssCalculator
   # In case the salary is beyond this limit, it will use its quotation apply inside the range salary limit
   class ThirdDiscountCalculator < DiscountCalculatorBase
     QUOTATION = 0.12
-    SALARY_BASE = 2089.60
-    SALARY_LIMIT = 3134.40
+    SALARY_BASE = 2666.68
+    SALARY_LIMIT = 4000.03
     FULL_CONTRIBUTION = ((SALARY_LIMIT - SALARY_BASE) * QUOTATION).truncate(2)
 
     def contribution
