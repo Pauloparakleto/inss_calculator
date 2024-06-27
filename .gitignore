@@ -9,3 +9,7 @@
 
 # rspec failure tracking
 .rspec_status
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inss_calculator.iml
+/.idea/vcs.xml
