@@ -16,6 +16,8 @@ Não conhecia [esse comando?](https://bundler.io/v2.5/man/bundle-add.1.html) Ele
 gross_salary = 3000
 calculator = InssCalculator::DiscountPrevidenceCalculator.new(gross_salary)
 calculator.contribution => 258.81
+calculator.salary => 3000.0
+calculator.net_salary => 2741.19
 ```
 
 ## Nota sobre trabalhar com números decimais em Ruby
