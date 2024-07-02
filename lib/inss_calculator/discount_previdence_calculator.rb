@@ -17,5 +17,9 @@ module InssCalculator
         FourthDiscountCalculator.new(salary).contribution
       ].reduce(:+).truncate(2)
     end
+
+    def net_salary
+      salary - contribution
+    end
   end
 end
