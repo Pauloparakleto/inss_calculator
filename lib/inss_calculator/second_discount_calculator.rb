@@ -31,6 +31,5 @@ module InssCalculator
     def salary_base
       InssCalculator::SECOND_SALARY_BASE
     end
-
   end
 end
