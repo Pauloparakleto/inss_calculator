@@ -15,7 +15,7 @@ module InssCalculator
     private
 
     def calculate_contribution
-      (salary * QUOTATION).truncate(2)
+      ((salary - salary_base) * QUOTATION).truncate(2)
     end
 
     def full_contribution
