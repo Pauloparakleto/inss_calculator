@@ -19,6 +19,30 @@ calculator.contribution => 258.81
 calculator.salary => 3000.0
 calculator.net_salary => 2741.19
 ```
+### Precisas realizar uma query ao Banco de Dados por grupo de faixa salarial?
+
+InssCalculator providencia as seguintes constantes:
+
+```
+  InssCalculator::FIRST_SALARY_BASE = 0.0
+  InssCalculator::FIRST_SALARY_LIMIT = 1412.0
+
+  InssCalculator::SECOND_SALARY_BASE = 1412.01
+  InssCalculator::SECOND_SALARY_LIMIT = 2666.68
+
+  InssCalculator::THIRD_SALARY_BASE = 2666.69
+  InssCalculator::THIRD_SALARY_LIMIT = 4000.03
+
+  InssCalculator::FOURTH_SALARY_BASE = 4000.04
+  InssCalculator::FOURTH_SALARY_LIMIT = 7786.02
+
+```
+
+Desta forma, uma requisição que busca somente a primeira faixa salarial seria:
+
+```
+YourModel.where("salary <= ?", InssCalculator::FIRST_SALARY_LIMIT)
+```
 
 ## Nota sobre trabalhar com números decimais em Ruby
 
