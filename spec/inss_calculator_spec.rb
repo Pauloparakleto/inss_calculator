@@ -4,64 +4,52 @@ require 'spec_helper'
 
 include InssCalculator
 
-RSpec.describe DiscountPrevidenceCalculator do
-  it 'is true' do
-    expect(described_class.new('3000')).to be_truthy
+RSpec.describe InssCalculator do
+  describe 'FIRST_SALARY_BASE' do
+    it 'is equal to 0.0' do
+      expect(described_class::FIRST_SALARY_BASE).to eq(0.0)
+    end
   end
 
-  describe '#salary' do
-    it 'gets salary' do
-      expect(described_class.new('3000').salary).to  eq(3000.0)
+  describe 'FIRST_SALARY_LIMIT' do
+    it 'is equal to 1412.0' do
+      expect(described_class::FIRST_SALARY_LIMIT).to eq(1412.0)
     end
   end
   
-  describe '#net_salary' do
-    it 'calculates net salary' do
-      expect(described_class.new('3000').net_salary).to  eq(2741.19)
+  describe 'SECOND_SALARY_BASE' do
+    it 'is equal to 1412.0' do
+      expect(described_class::SECOND_SALARY_BASE).to eq(1412.01)
     end
   end
-
-  describe '#contribution' do
-    context 'when salary is 3000' do
-      it 'is 281.62' do
-        expect(described_class.new('3000').contribution).to eq(258.81)
-      end
+  
+  describe 'SECOND_SALARY_LIMIT' do
+    it 'is equal to 2666.68' do
+      expect(described_class::SECOND_SALARY_LIMIT).to eq(2666.68)
     end
-
-    context 'when salary is 0' do
-      it 'is 0' do
-        expect(described_class.new('0').contribution).to eq(0)
-      end
+  end
+  
+  describe 'THIRD_SALARY_BASE' do
+    it 'is equal to 2666.68' do
+      expect(described_class::THIRD_SALARY_BASE).to eq(2666.69)
     end
-
-    context 'when salary is 1412.0' do
-      it 'is 105.9' do
-        expect(described_class.new('1412.0').contribution).to eq(105.9)
-      end
+  end
+  
+  describe 'THIRD_SALARY_LIMIT' do
+    it 'is equal to 4000.03' do
+      expect(described_class::THIRD_SALARY_LIMIT).to eq(4000.03)
     end
-
-    context 'when salary is 2666.68' do
-      it 'is 112.92 + first full contribution' do
-        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
-      end
+  end
+  
+  describe 'FOURTH_SALARY_BASE' do
+    it 'is equal to 4000.03' do
+      expect(described_class::FOURTH_SALARY_BASE).to eq(4000.04)
     end
-
-    context 'when salary is 4000.03' do
-      it 'is 378.82' do
-        expect(described_class.new('4000.03').contribution).to eq(378.82)
-      end
-    end
-
-    context 'when salary is 5000' do
-      it 'is 518.81' do
-        expect(described_class.new('5000').contribution).to eq(518.81)
-      end
-    end
-
-    context 'when salary is 7786.02' do
-      it 'is 908.84' do
-        expect(described_class.new('7786.02').contribution).to eq(908.84)
-      end
+  end
+  
+  describe 'FOURTH_SALARY_LIMIT' do
+    it 'is equal to 7786.02' do
+      expect(described_class::FOURTH_SALARY_LIMIT).to eq(7786.02)
     end
   end
 end
