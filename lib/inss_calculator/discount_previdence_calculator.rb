@@ -15,11 +15,11 @@ module InssCalculator
         SecondDiscountCalculator.new(salary).contribution,
         ThirdDiscountCalculator.new(salary).contribution,
         FourthDiscountCalculator.new(salary).contribution
-      ].reduce(:+).truncate(2)
+      ].reduce(:+).round(2)
     end
 
     def net_salary
-      salary - contribution
+      (salary - contribution).round(2)
     end
   end
 end
