@@ -59,8 +59,8 @@ RSpec.describe DiscountPrevidenceCalculator do
     end
 
     context 'when salary is 7786.02' do
-      it 'is 908.84' do
-        expect(described_class.new('7786.02').contribution).to eq(908.84)
+      it 'is 908.85' do
+        expect(described_class.new('7786.02').contribution).to eq(908.85)
       end
     end
   end
