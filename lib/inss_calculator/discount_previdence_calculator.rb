@@ -19,7 +19,7 @@ module InssCalculator
     end
 
     def net_salary
-      salary - contribution
+      (salary - contribution).round(2)
     end
   end
 end

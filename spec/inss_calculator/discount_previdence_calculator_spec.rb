@@ -19,6 +19,12 @@ RSpec.describe DiscountPrevidenceCalculator do
     it 'calculates net salary' do
       expect(described_class.new('3000').net_salary).to  eq(2741.19)
     end
+
+    context 'when 5000' do
+      it 'calculates truncated value' do
+        expect(described_class.new('5000').net_salary).to eq(4481.19)
+      end
+    end
   end
 
   describe '#contribution' do
