@@ -54,5 +54,8 @@ Por isso o uso do método `.truncate` ao invés de um arredondamento ao final de
 
 Para mais detalhes, veja a regra e o exemplo [deste site](https://www.contabilizei.com.br/contabilidade-online/desconto-inss/)
 
+### Vídeo de apresentação
+
+[Assista](https://youtu.be/Eu5htw8qb4k?si=mpog6q0PJpxxuEjX) este vídeo no qual apresento um exemplo de uso da gem.
 
 ### Feito com amor, feito com Ruby S2
