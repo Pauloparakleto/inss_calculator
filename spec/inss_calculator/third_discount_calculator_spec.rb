@@ -15,6 +15,12 @@ RSpec.describe ThirdDiscountCalculator do
     end
   end
 
+  context 'when salary is 2800' do
+    it 'is 15.99' do
+      expect(described_class.new('2800').contribution).to eq(15.99)
+    end
+  end
+
   context 'when salary fills entirely the class level' do
     it 'is 160.0' do
       expect(described_class.new(4000.03).contribution).to eq(160.0)

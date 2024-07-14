@@ -46,8 +46,20 @@ RSpec.describe DiscountPrevidenceCalculator do
       end
     end
 
+    context 'when salary is 1500' do
+      it 'is 113.82' do
+        expect(described_class.new('1500').contribution).to eq(113.82)
+      end
+    end
+
     context 'when salary is 2666.68' do
       it 'is 112.92 + first full contribution' do
+        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
+      end
+    end
+
+    context 'when salary is 2800' do
+      it 'is 234.81' do
         expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
       end
     end

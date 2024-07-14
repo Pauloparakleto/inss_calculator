@@ -14,6 +14,12 @@ RSpec.describe SecondDiscountCalculator do
       expect(described_class.new('1412.0').contribution).to eq(0.0)
     end
   end
+ 
+  context 'when salary is 1500' do
+    it 'is 113.82' do
+      expect(described_class.new('1500').contribution).to eq(7.92)
+    end
+  end
 
   context 'when salary is 2666.68' do
     it 'is 112.92' do

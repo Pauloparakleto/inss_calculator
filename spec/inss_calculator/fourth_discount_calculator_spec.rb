@@ -21,6 +21,12 @@ RSpec.describe FourthDiscountCalculator do
     end
   end
 
+  context 'when salary is 5000' do
+    it 'is 518.81' do
+      expect(described_class.new('5000').contribution).to eq(139.99)
+    end
+  end
+
   context 'when salary is beyond salary level' do
     it 'is 530.03' do
       expect(described_class.new('10000').contribution).to eq(530.03)

@@ -7,7 +7,7 @@ module InssCalculator
     QUOTATION = 0.14
 
     def contribution
-      return NO_CONTRIBUTION if salary < salary_base
+      return NO_CONTRIBUTION if salary <= salary_base
 
       return full_contribution if salary > salary_limit
 
@@ -29,7 +29,7 @@ module InssCalculator
     end
 
     def salary_base
-      InssCalculator::FOURTH_SALARY_BASE
+      InssCalculator::THIRD_SALARY_LIMIT
     end
   end
 end
