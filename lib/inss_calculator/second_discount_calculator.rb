@@ -29,7 +29,7 @@ module InssCalculator
     end
 
     def salary_base
-      InssCalculator::SECOND_SALARY_BASE
+      InssCalculator::FIRST_SALARY_LIMIT
     end
   end
 end
