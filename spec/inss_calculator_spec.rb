@@ -94,4 +94,10 @@ RSpec.describe InssCalculator do
       expect(described_class::SEVENTH_SALARY_BASE).to eq(26666.95)
     end
   end
+
+  describe 'EIGTH_SALARY_LIMIT' do
+    it 'is equal to Float::INFINITY' do
+      expect(described_class::EIGTH_SALARY_LIMIT).to eq(Float::INFINITY)
+    end
+  end
 end

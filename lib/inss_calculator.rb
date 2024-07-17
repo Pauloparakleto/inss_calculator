@@ -10,6 +10,7 @@ require_relative 'inss_calculator/fourth_discount_calculator'
 require_relative 'inss_calculator/fifth_discount_calculator'
 require_relative 'inss_calculator/sixth_discount_calculator'
 require_relative 'inss_calculator/seventh_discount_calculator'
+require_relative 'inss_calculator/eigth_discount_calculator'
 
 module InssCalculator
   class Error < StandardError; end
@@ -36,4 +37,5 @@ module InssCalculator
   SEVENTH_SALARY_LIMIT = 52000.54
 
   EIGTH_SALARY_BASE = 52000.55
+  EIGTH_SALARY_LIMIT = Float::INFINITY
 end
