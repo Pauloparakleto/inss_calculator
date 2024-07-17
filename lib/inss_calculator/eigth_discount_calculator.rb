@@ -3,7 +3,6 @@
 module InssCalculator
   # EigthDiscountCalculator calculates between its range limit
   # As the limit is infinity, it always eacrease the contribution.
-
   class EigthDiscountCalculator < DiscountCalculatorBase
     QUOTATION = 0.22
 
