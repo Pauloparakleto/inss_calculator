@@ -2,7 +2,8 @@
 
 module InssCalculator
   # EigthDiscountCalculator calculates between its range limit
-  # In case the salary is beyond this limit, it will use its quotation apply inside the range salary limit
+  # As the limit is infinity, it always eacrease the contribution.
+
   class EigthDiscountCalculator < DiscountCalculatorBase
     QUOTATION = 0.22
 

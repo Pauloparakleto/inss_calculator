@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module InssCalculator
-  # FourthDiscountCalculator calculates between its range limit
+  # SixthDiscountCalculator calculates between its range limit
   # In case the salary is beyond this limit, it will use its quotation apply inside the range salary limit
   class SixthDiscountCalculator < DiscountCalculatorBase
     QUOTATION = 0.165
