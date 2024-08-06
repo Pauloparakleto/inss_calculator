@@ -13,7 +13,8 @@ module InssCalculator
     private
 
     def public_contribution
-      [ FifthDiscountCalculator.new(salary).contribution,
+      [
+        FifthDiscountCalculator.new(salary).contribution,
         SixthDiscountCalculator.new(salary).contribution,
         SeventhDiscountCalculator.new(salary).contribution,
         EigthDiscountCalculator.new(salary).contribution
