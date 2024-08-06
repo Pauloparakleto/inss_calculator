@@ -1,6 +1,9 @@
 # InssCalculator
 
-Calculadora do desconto do INSS sobre o salário bruto 2024
+Calculadora do desconto do INSS sobre o salário bruto 2024 de acordo com a [Portaria Inter Ministerial
+número 2 de 11 de Janeiro de 2024](https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232).
+
+Esta mesma portaria discorre tanto sobre a contribuição do trabalhador do setor público quanto do setor privado.
 
 ## Instalation
 
@@ -12,12 +15,28 @@ Não conhecia [esse comando?](https://bundler.io/v2.5/man/bundle-add.1.html) Ele
 
 ## Usage
 
+Para calcular a contribuição do trabalhador no setor privado:
+
 ```
 gross_salary = 3000
 calculator = InssCalculator::DiscountPrevidenceCalculator.new(gross_salary)
 calculator.contribution => 258.81
 calculator.salary => 3000.0
 calculator.net_salary => 2741.19
+
+```
+Para calcular a contribuição do trabalhador no setor público:
+
+```
+
+gross_salary = 52000.54
+calculator = InssCalculator::PublicInssCalculator.new(gross_salary)
+calculator.contribution => 8726.63
+calculator.salary => 3000.0
+calculator.net_salary => 2741.19
+
+```
+```
 ```
 ### Precisas realizar uma query ao Banco de Dados por grupo de faixa salarial?
 
@@ -35,6 +54,21 @@ InssCalculator providencia as seguintes constantes:
 
   InssCalculator::FOURTH_SALARY_BASE = 4000.04
   InssCalculator::FOURTH_SALARY_LIMIT = 7786.02
+
+  # Abaixo as bases e os limites do setor público
+
+  InssCalculator::FIFTH_SALARY_BASE = 7786.03
+  InssCalculator::FIFTH_SALARY_LIMIT = 13_333.48
+
+  InssCalculator::SIXTH_SALARY_BASE = 13_333.49
+  InssCalculator::SIXTH_SALARY_LIMIT = 26_666.94
+
+  InssCalculator::SEVENTH_SALARY_BASE = 26_666.95
+  InssCalculator::SEVENTH_SALARY_LIMIT = 52_000.54
+
+  InssCalculator::EIGTH_SALARY_BASE = 52_000.55
+  InssCalculator::EIGTH_SALARY_LIMIT = Float::INFINITY
+
 
 ```
 
