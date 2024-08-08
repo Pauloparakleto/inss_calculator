@@ -32,8 +32,8 @@ Para calcular a contribuição do trabalhador no setor público:
 gross_salary = 52000.54
 calculator = InssCalculator::PublicInssCalculator.new(gross_salary)
 calculator.contribution => 8726.63
-calculator.salary => 3000.0
-calculator.net_salary => 2741.19
+calculator.salary => 52000.54
+calculator.net_salary => 43273.91
 
 ```
 ```
