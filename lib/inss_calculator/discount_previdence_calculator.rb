@@ -2,6 +2,7 @@
 
 module InssCalculator
   # Based on this insecure protocoll site https://www.coalize.com.br/calculadora-de-inss
+  # Check also the official law https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232
   class DiscountPrevidenceCalculator
     attr_reader :salary
 
