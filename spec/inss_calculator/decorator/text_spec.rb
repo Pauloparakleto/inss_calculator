@@ -20,4 +20,11 @@ RSpec.describe Text do
         .to be_an_instance_of(InssCalculator::DiscountPrevidenceCalculator)
     end
   end
+  
+  describe '#contribution' do
+    it 'calls original contribution' do
+      expect(described_class.new(inss_calculator).contribution)
+        .to eq(258.81)
+    end
+  end
 end

@@ -11,7 +11,7 @@ module InssCalculator
 
       def_delegators :@calculator, :salary, :net_salary, :contribution
 
-      attr_reader :contribution, :calculator
+      attr_reader :calculator
 
       def initialize(inss_calculator)
         @calculator = inss_calculator
