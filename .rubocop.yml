@@ -1,9 +1,8 @@
 AllCops:
   TargetRubyVersion: 3.2.2
-  Exclude:
-    - 'lib/dinheiro.rb'
   Include:
-    - 'lib/**/*.rb'
+    - 'lib/inss_calculator/*.rb'
+    - 'inss_calculator.rb'
 
 Style/StringLiterals:
   Enabled: true
