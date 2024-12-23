@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'inss_calculator/version'
-require_relative './dinheiro.rb'
+require_relative './dinheiro'
 require_relative 'inss_calculator/discount_calculator_base'
 require_relative 'inss_calculator/discount_previdence_calculator'
 require_relative 'inss_calculator/public_inss_calculator'
