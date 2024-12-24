@@ -78,6 +78,21 @@ Desta forma, uma requisição que busca somente a primeira faixa salarial seria:
 YourModel.where("salary <= ?", InssCalculator::FIRST_SALARY_LIMIT)
 ```
 
+## Decorators
+
+`InssCalculator::Decorator::Text` explica no formato de texto o que o trabalhador precisa saber.
+Ideal para uso no parágrafo do HTML. Retire da view esta responsabildade e deixe com este decorator.
+Você ainda tem acesso à classe original com `#calculator`.
+
+```
+calculator = InssCalculator::DiscountPrevidenceCalculator.new(3000)
+text_decorator = InssCalculator::Decorator::Text.new(calculator)
+text_decorator.present => "Com o salário de R$ 3.000,00, sua contribuição é de R$ 258,81. Seu salário líquido, portanto, é de R$ 2.741,19."
+
+text_decorator.calculator => InssCalculator::DiscountPrevidenceCalculator.new(3000)
+
+```
+
 ## Nota sobre trabalhar com números decimais em Ruby
 
 Após investigar os resultados dos exemplos contábeis, concluiu-se que os números são truncados.
