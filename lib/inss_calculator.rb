@@ -42,3 +42,5 @@ module InssCalculator
   EIGTH_SALARY_BASE = 52_000.55
   EIGTH_SALARY_LIMIT = Float::INFINITY
 end
+
+require_relative 'inss_calculator/error/no_method_error'

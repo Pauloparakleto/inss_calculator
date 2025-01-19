@@ -22,5 +22,9 @@ module InssCalculator
     def net_salary
       (salary - contribution).round(2)
     end
+
+    def present
+      raise InssCalculator::NoMethodError, message: 'Use a decorator instead!'
+    end
   end
 end
