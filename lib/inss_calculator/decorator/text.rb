@@ -9,12 +9,16 @@ module InssCalculator
     class Text
       extend Forwardable
 
-      def_delegators :@calculator, :salary, :net_salary, :contribution
+      def_delegators :@calculator, :salary, :net_salary
 
       attr_reader :calculator
 
       def initialize(inss_calculator)
         @calculator = inss_calculator
+      end
+
+      def contribution
+        Dinheiro.new(calculator.contribution).real_formatado
       end
 
       def present

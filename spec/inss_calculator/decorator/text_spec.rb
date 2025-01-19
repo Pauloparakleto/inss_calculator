@@ -24,7 +24,7 @@ RSpec.describe Text do
   describe '#contribution' do
     it 'calls original contribution' do
       expect(described_class.new(inss_calculator).contribution)
-        .to eq(258.81)
+        .to eq('R$ 258,81')
     end
   end
 end
