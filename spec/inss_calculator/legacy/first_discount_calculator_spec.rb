@@ -2,7 +2,7 @@ require 'spec_helper'
 
 include InssCalculator
 
-RSpec.describe FirstDiscountCalculator do
+RSpec.describe Legacy::FirstDiscountCalculator do
   it 'is true' do
     expect(described_class.new(3000)).to be_truthy
   end

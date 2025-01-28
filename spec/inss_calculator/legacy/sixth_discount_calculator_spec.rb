@@ -4,7 +4,7 @@ require 'spec_helper'
 
 include InssCalculator
 
-RSpec.describe SixthDiscountCalculator do
+RSpec.describe Legacy::SixthDiscountCalculator do
   it 'is true' do
     expect(described_class.new('3000')).to be_truthy
   end
