@@ -26,11 +26,11 @@ module InssCalculator
       end
 
       def salary_limit
-        InssCalculator::Legacy::FOURTH_SALARY_LIMIT
+        InssCalculator::Legacy::SalaryLevels::FOURTH_SALARY_LIMIT
       end
 
       def salary_base
-        InssCalculator::Legacy::THIRD_SALARY_LIMIT
+        InssCalculator::Legacy::SalaryLevels::THIRD_SALARY_LIMIT
       end
     end
   end

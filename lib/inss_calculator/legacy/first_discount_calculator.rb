@@ -24,11 +24,11 @@ module InssCalculator
       end
 
       def salary_limit
-        InssCalculator::Legacy::FIRST_SALARY_LIMIT
+        InssCalculator::Legacy::SalaryLevels::FIRST_SALARY_LIMIT
       end
 
       def salary_base
-        InssCalculator::Legacy::FIRST_SALARY_BASE
+        InssCalculator::Legacy::SalaryLevels::FIRST_SALARY_BASE
       end
     end
   end
