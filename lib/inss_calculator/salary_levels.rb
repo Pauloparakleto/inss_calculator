@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module InssCalculator
   module SalaryLevels
     FIRST_SALARY_BASE = 0.0
