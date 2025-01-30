@@ -23,20 +23,20 @@ RSpec.describe DiscountPrevidenceCalculator do
   
   describe '#net_salary' do
     it 'calculates net salary' do
-      expect(described_class.new('3000').net_salary).to  eq(2741.19)
+      expect(described_class.new('3000').net_salary).to  eq(2746.6)
     end
 
     context 'when 5000' do
       it 'calculates truncated value' do
-        expect(described_class.new('5000').net_salary).to eq(4481.19)
+        expect(described_class.new('5000').net_salary).to eq(4490.42)
       end
     end
   end
 
   describe '#contribution' do
     context 'when salary is 3000' do
-      it 'is 281.62' do
-        expect(described_class.new('3000').contribution).to eq(258.81)
+      it 'is 253.4' do
+        expect(described_class.new('3000').contribution).to eq(253.4)
       end
     end
 
@@ -52,39 +52,33 @@ RSpec.describe DiscountPrevidenceCalculator do
       end
     end
 
-    context 'when salary is 1500' do
+    context 'when salary is 1518' do
       it 'is 113.82' do
-        expect(described_class.new('1500').contribution).to eq(113.82)
+        expect(described_class.new('1518').contribution).to eq(113.85)
       end
     end
 
-    context 'when salary is 2666.68' do
-      it 'is 112.92 + first full contribution' do
-        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
+    context 'when salary is 2793.88' do
+      it 'is 228.67' do
+        expect(described_class.new('2793.88').contribution).to eq(228.67)
       end
     end
 
-    context 'when salary is 2800' do
-      it 'is 234.81' do
-        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
-      end
-    end
-
-    context 'when salary is 4000.03' do
-      it 'is 378.82' do
-        expect(described_class.new('4000.03').contribution).to eq(378.82)
+    context 'when salary is 4190.83' do
+      it 'is 396.3' do
+        expect(described_class.new('4190.83').contribution).to eq(396.3)
       end
     end
 
     context 'when salary is 5000' do
-      it 'is 518.81' do
-        expect(described_class.new('5000').contribution).to eq(518.81)
+      it 'is 509.58' do
+        expect(described_class.new('5000').contribution).to eq(509.58)
       end
     end
 
-    context 'when salary is 7786.02' do
+    context 'when salary is 8157.41' do
       it 'is 908.85' do
-        expect(described_class.new('7786.02').contribution).to eq(908.85)
+        expect(described_class.new('8157.41').contribution).to eq(951.62)
       end
     end
   end
