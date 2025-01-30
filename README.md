@@ -42,31 +42,31 @@ calculator.net_salary => 43273.91
 InssCalculator providencia as seguintes constantes:
 
 ```
-  InssCalculator::FIRST_SALARY_BASE = 0.0
-  InssCalculator::FIRST_SALARY_LIMIT = 1412.0
+  InssCalculator::SalaryLevels::FIRST_SALARY_BASE = 0.0
+  InssCalculator::SalaryLevels::FIRST_SALARY_LIMIT = 1412.0
 
-  InssCalculator::SECOND_SALARY_BASE = 1412.01
-  InssCalculator::SECOND_SALARY_LIMIT = 2666.68
+  InssCalculator::SalaryLevels::SECOND_SALARY_BASE = 1412.01
+  InssCalculator::SalaryLevels::SECOND_SALARY_LIMIT = 2666.68
 
-  InssCalculator::THIRD_SALARY_BASE = 2666.69
-  InssCalculator::THIRD_SALARY_LIMIT = 4000.03
+  InssCalculator::SalaryLevels::THIRD_SALARY_BASE = 2666.69
+  InssCalculator::SalaryLevels::THIRD_SALARY_LIMIT = 4000.03
 
-  InssCalculator::FOURTH_SALARY_BASE = 4000.04
-  InssCalculator::FOURTH_SALARY_LIMIT = 7786.02
+  InssCalculator::SalaryLevels::FOURTH_SALARY_BASE = 4000.04
+  InssCalculator::SalaryLevels::FOURTH_SALARY_LIMIT = 7786.02
 
   # Abaixo as bases e os limites do setor público
 
-  InssCalculator::FIFTH_SALARY_BASE = 7786.03
-  InssCalculator::FIFTH_SALARY_LIMIT = 13_333.48
+  InssCalculator::SalaryLevels::FIFTH_SALARY_BASE = 7786.03
+  InssCalculator::SalaryLevels::FIFTH_SALARY_LIMIT = 13_333.48
 
-  InssCalculator::SIXTH_SALARY_BASE = 13_333.49
-  InssCalculator::SIXTH_SALARY_LIMIT = 26_666.94
+  InssCalculator::SalaryLevels::SIXTH_SALARY_BASE = 13_333.49
+  InssCalculator::SalaryLevels::SIXTH_SALARY_LIMIT = 26_666.94
 
-  InssCalculator::SEVENTH_SALARY_BASE = 26_666.95
-  InssCalculator::SEVENTH_SALARY_LIMIT = 52_000.54
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_BASE = 26_666.95
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_LIMIT = 52_000.54
 
-  InssCalculator::EIGTH_SALARY_BASE = 52_000.55
-  InssCalculator::EIGTH_SALARY_LIMIT = Float::INFINITY
+  InssCalculator::SalaryLevels::EIGTH_SALARY_BASE = 52_000.55
+  InssCalculator::SalaryLevels::EIGTH_SALARY_LIMIT = Float::INFINITY
 
 
 ```
