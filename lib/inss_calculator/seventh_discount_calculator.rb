@@ -25,11 +25,11 @@ module InssCalculator
     end
 
     def salary_limit
-      InssCalculator::SEVENTH_SALARY_LIMIT
+      InssCalculator::SalaryLevels::SEVENTH_SALARY_LIMIT
     end
 
     def salary_base
-      InssCalculator::SIXTH_SALARY_LIMIT
+      InssCalculator::SalaryLevels::SIXTH_SALARY_LIMIT
     end
   end
 end

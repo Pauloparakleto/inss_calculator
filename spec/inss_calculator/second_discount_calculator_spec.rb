@@ -15,21 +15,21 @@ RSpec.describe SecondDiscountCalculator do
     end
   end
  
-  context 'when salary is 1500' do
-    it 'is 113.82' do
-      expect(described_class.new('1500').contribution).to eq(7.92)
+  context 'when salary is 1700' do
+    it 'is 16.38' do
+      expect(described_class.new('1700').contribution).to eq(16.38)
     end
   end
 
-  context 'when salary is 2666.68' do
-    it 'is 112.92' do
-      expect(described_class.new('2666.68').contribution).to eq(112.92)
+  context 'when salary is 2793.88' do
+    it 'is 114.82' do
+      expect(described_class.new('2793.88').contribution).to eq(114.82)
     end
   end
 
-  context 'when salary is beyond 2666.68' do
-    it 'is 112.92' do
-      expect(described_class.new('3000').contribution).to eq(112.92)
+  context 'when salary is beyond 2793.88' do
+    it 'is 114.82' do
+      expect(described_class.new('4000').contribution).to eq(114.82)
     end
   end
 end

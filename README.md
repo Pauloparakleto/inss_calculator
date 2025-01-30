@@ -1,7 +1,6 @@
 # InssCalculator
 
-Calculadora do desconto do INSS sobre o salário bruto 2024 de acordo com a [Portaria Inter Ministerial
-número 2 de 11 de Janeiro de 2024](https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232).
+Calculadora de desconto do INSS de 2025 de acordo com a [Portaria Interministerial n. 6 de 10 de Janeiro de 2025](https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-6-de-10-de-janeiro-de-2025-606526848)
 
 Esta mesma portaria discorre tanto sobre a contribuição do trabalhador do setor público quanto do setor privado.
 
@@ -20,9 +19,9 @@ Para calcular a contribuição do trabalhador no setor privado:
 ```
 gross_salary = 3000
 calculator = InssCalculator::DiscountPrevidenceCalculator.new(gross_salary)
-calculator.contribution => 258.81
+calculator.contribution => 253.40
 calculator.salary => 3000.0
-calculator.net_salary => 2741.19
+calculator.net_salary => 2746.60
 
 ```
 Para calcular a contribuição do trabalhador no setor público:
@@ -43,31 +42,31 @@ calculator.net_salary => 43273.91
 InssCalculator providencia as seguintes constantes:
 
 ```
-  InssCalculator::FIRST_SALARY_BASE = 0.0
-  InssCalculator::FIRST_SALARY_LIMIT = 1412.0
+  InssCalculator::SalaryLevels::FIRST_SALARY_BASE = 0.0
+  InssCalculator::SalaryLevels::FIRST_SALARY_LIMIT = 1412.0
 
-  InssCalculator::SECOND_SALARY_BASE = 1412.01
-  InssCalculator::SECOND_SALARY_LIMIT = 2666.68
+  InssCalculator::SalaryLevels::SECOND_SALARY_BASE = 1412.01
+  InssCalculator::SalaryLevels::SECOND_SALARY_LIMIT = 2666.68
 
-  InssCalculator::THIRD_SALARY_BASE = 2666.69
-  InssCalculator::THIRD_SALARY_LIMIT = 4000.03
+  InssCalculator::SalaryLevels::THIRD_SALARY_BASE = 2666.69
+  InssCalculator::SalaryLevels::THIRD_SALARY_LIMIT = 4000.03
 
-  InssCalculator::FOURTH_SALARY_BASE = 4000.04
-  InssCalculator::FOURTH_SALARY_LIMIT = 7786.02
+  InssCalculator::SalaryLevels::FOURTH_SALARY_BASE = 4000.04
+  InssCalculator::SalaryLevels::FOURTH_SALARY_LIMIT = 7786.02
 
   # Abaixo as bases e os limites do setor público
 
-  InssCalculator::FIFTH_SALARY_BASE = 7786.03
-  InssCalculator::FIFTH_SALARY_LIMIT = 13_333.48
+  InssCalculator::SalaryLevels::FIFTH_SALARY_BASE = 7786.03
+  InssCalculator::SalaryLevels::FIFTH_SALARY_LIMIT = 13_333.48
 
-  InssCalculator::SIXTH_SALARY_BASE = 13_333.49
-  InssCalculator::SIXTH_SALARY_LIMIT = 26_666.94
+  InssCalculator::SalaryLevels::SIXTH_SALARY_BASE = 13_333.49
+  InssCalculator::SalaryLevels::SIXTH_SALARY_LIMIT = 26_666.94
 
-  InssCalculator::SEVENTH_SALARY_BASE = 26_666.95
-  InssCalculator::SEVENTH_SALARY_LIMIT = 52_000.54
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_BASE = 26_666.95
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_LIMIT = 52_000.54
 
-  InssCalculator::EIGTH_SALARY_BASE = 52_000.55
-  InssCalculator::EIGTH_SALARY_LIMIT = Float::INFINITY
+  InssCalculator::SalaryLevels::EIGTH_SALARY_BASE = 52_000.55
+  InssCalculator::SalaryLevels::EIGTH_SALARY_LIMIT = Float::INFINITY
 
 
 ```
@@ -106,5 +105,10 @@ Para mais detalhes, veja a regra e o exemplo [deste site](https://www.contabiliz
 ### Vídeo de apresentação
 
 [Assista](https://youtu.be/Eu5htw8qb4k?si=mpog6q0PJpxxuEjX) este vídeo no qual apresento um exemplo de uso da gem.
+
+## Ainda precisa da calculadora de 2024?
+
+Calculadora do desconto do INSS sobre o salário bruto 2024 de acordo com a [Portaria Inter Ministerial
+número 2 de 11 de Janeiro de 2024](https://www.in.gov.br/en/web/dou/-/portaria-interministerial-mps/mf-n-2-de-11-de-janeiro-de-2024-537035232) foi movida para o módulo `InssCalculator::Legacy::DiscountPrevidenceCalculator`.
 
 ### Feito com amor, feito com Ruby S2
