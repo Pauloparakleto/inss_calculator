@@ -17,11 +17,11 @@ Não conhecia [esse comando?](https://bundler.io/v2.5/man/bundle-add.1.html) Ele
 Para calcular a contribuição do trabalhador no setor privado:
 
 ```
-gross_salary = 3000
+gross_salary = 1518.0
 calculator = InssCalculator::DiscountPrevidenceCalculator.new(gross_salary)
-calculator.contribution => 253.40
-calculator.salary => 3000.0
-calculator.net_salary => 2746.60
+calculator.contribution => 113.85
+calculator.salary => 1518.0
+calculator.net_salary => 1404.15
 
 ```
 Para calcular a contribuição do trabalhador no setor público:
