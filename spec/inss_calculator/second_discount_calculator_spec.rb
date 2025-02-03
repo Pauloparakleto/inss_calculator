@@ -11,7 +11,7 @@ RSpec.describe SecondDiscountCalculator do
 
   context 'when salary is below salary class level' do
     it 'is zero' do
-      expect(described_class.new('1412.0').contribution).to eq(0.0)
+      expect(described_class.new('1518.0').contribution).to eq(0.0)
     end
   end
  
