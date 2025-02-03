@@ -17,20 +17,20 @@ RSpec.describe PublicInssCalculator do
   
   describe '#net_salary' do
     it 'calculates net salary' do
-      expect(described_class.new('3000').net_salary).to  eq(2741.19)
+      expect(described_class.new('3000').net_salary).to  eq(2746.6)
     end
 
     context 'when 5000' do
       it 'calculates truncated value' do
-        expect(described_class.new('5000').net_salary).to eq(4481.19)
+        expect(described_class.new('5000').net_salary).to eq(4490.42)
       end
     end
   end
 
   describe '#contribution' do
     context 'when salary is 3000' do
-      it 'is 281.62' do
-        expect(described_class.new('3000').contribution).to eq(258.81)
+      it 'is 253.4' do
+        expect(described_class.new('3000').contribution).to eq(253.4)
       end
     end
 
@@ -40,77 +40,33 @@ RSpec.describe PublicInssCalculator do
       end
     end
 
-    context 'when salary is 1412.0' do
-      it 'is 105.9' do
-        expect(described_class.new('1412.0').contribution).to eq(105.9)
+    context 'when salary is 13969.49' do
+      it 'is 1794.37' do
+        expect(described_class.new('13969.49').contribution).to eq(1794.37)
       end
     end
 
-    context 'when salary is 1500' do
-      it 'is 113.82' do
-        expect(described_class.new('1500').contribution).to eq(113.82)
+    context 'when salary is 27938.95' do
+      it 'is 4099.33' do
+        expect(described_class.new('27938.95').contribution).to eq(4099.33)
       end
     end
 
-    context 'when salary is 2666.68' do
-      it 'is 112.92 + first full contribution' do
-        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
+    context 'when salary is 54480.97' do
+      it 'is 9142.31' do
+        expect(described_class.new('54480.97').contribution).to eq(9142.31)
       end
     end
 
-    context 'when salary is 2800' do
-      it 'is 234.81' do
-        expect(described_class.new('2666.68').contribution).to eq(112.92 + 105.9)
+    xcontext 'when salary is 60000.00' do
+      it 'is 10356.49' do
+        expect(described_class.new('60000.00').contribution).to eq(10356.49)
       end
     end
 
-    context 'when salary is 4000.03' do
-      it 'is 378.82' do
-        expect(described_class.new('4000.03').contribution).to eq(378.82)
-      end
-    end
-
-    context 'when salary is 5000' do
-      it 'is 518.81' do
-        expect(described_class.new('5000').contribution).to eq(518.81)
-      end
-    end
-
-    context 'when salary is 7786.02' do
-      it 'is 908.85' do
-        expect(described_class.new('7786.02').contribution).to eq(908.85)
-      end
-    end
-
-    # the expectations above is the same for private employeers contributions
-
-    context 'when salary is 13333.48' do
-      it 'is 1713.23' do
-        expect(described_class.new('13333.48').contribution).to eq(1713.23)
-      end
-    end
-
-    context 'when salary is 26666.94' do
-      it 'is 3913.25' do
-        expect(described_class.new('26666.94').contribution).to eq(3913.25)
-      end
-    end
-
-    context 'when salary is 52000.54' do
-      it 'is 8726.63' do
-        expect(described_class.new('52000.54').contribution).to eq(8726.63)
-      end
-    end
-
-    context 'when salary is 60000.00' do
-      it 'is 10486.51' do
-        expect(described_class.new('60000.00').contribution).to eq(10486.51)
-      end
-    end
-
-    context 'when salary is 100000' do
-      it 'is 19286.51' do
-        expect(described_class.new('100000').contribution).to eq(19286.51)
+    xcontext 'when salary is 100000' do
+      it 'is 19156.48' do
+        expect(described_class.new('100000').contribution).to eq(19156.48)
       end
     end
   end

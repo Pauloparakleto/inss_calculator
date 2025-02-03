@@ -4,7 +4,7 @@ require 'spec_helper'
 
 include InssCalculator
 
-RSpec.describe EigthDiscountCalculator do
+RSpec.describe Legacy::EigthDiscountCalculator do
   it 'is true' do
     expect(described_class.new('3000')).to be_truthy
   end
@@ -16,8 +16,8 @@ RSpec.describe EigthDiscountCalculator do
   end
 
   context 'when salary is 60000' do
-    it 'is 1214.18' do
-      expect(described_class.new('60000').contribution).to eq(1214.18)
+    it 'is 1759.88' do
+      expect(described_class.new('60000').contribution).to eq(1759.88)
     end
   end
 end
