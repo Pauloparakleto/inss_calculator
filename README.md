@@ -43,29 +43,29 @@ InssCalculator providencia as seguintes constantes:
 
 ```
   InssCalculator::SalaryLevels::FIRST_SALARY_BASE = 0.0
-  InssCalculator::SalaryLevels::FIRST_SALARY_LIMIT = 1412.0
+  InssCalculator::SalaryLevels::FIRST_SALARY_LIMIT = 1518.0
 
-  InssCalculator::SalaryLevels::SECOND_SALARY_BASE = 1412.01
-  InssCalculator::SalaryLevels::SECOND_SALARY_LIMIT = 2666.68
+  InssCalculator::SalaryLevels::SECOND_SALARY_BASE = 1518.01
+  InssCalculator::SalaryLevels::SECOND_SALARY_LIMIT = 2793.88
 
-  InssCalculator::SalaryLevels::THIRD_SALARY_BASE = 2666.69
-  InssCalculator::SalaryLevels::THIRD_SALARY_LIMIT = 4000.03
+  InssCalculator::SalaryLevels::THIRD_SALARY_BASE = 2793.89
+  InssCalculator::SalaryLevels::THIRD_SALARY_LIMIT = 4190.83
 
-  InssCalculator::SalaryLevels::FOURTH_SALARY_BASE = 4000.04
-  InssCalculator::SalaryLevels::FOURTH_SALARY_LIMIT = 7786.02
+  InssCalculator::SalaryLevels::FOURTH_SALARY_BASE = 4190.84
+  InssCalculator::SalaryLevels::FOURTH_SALARY_LIMIT = 8157.41
 
   # Abaixo as bases e os limites do setor público
 
-  InssCalculator::SalaryLevels::FIFTH_SALARY_BASE = 7786.03
-  InssCalculator::SalaryLevels::FIFTH_SALARY_LIMIT = 13_333.48
+  InssCalculator::SalaryLevels::FIFTH_SALARY_BASE = 8157.42
+  InssCalculator::SalaryLevels::FIFTH_SALARY_LIMIT = 13969.49
 
-  InssCalculator::SalaryLevels::SIXTH_SALARY_BASE = 13_333.49
-  InssCalculator::SalaryLevels::SIXTH_SALARY_LIMIT = 26_666.94
+  InssCalculator::SalaryLevels::SIXTH_SALARY_BASE = 13969.5
+  InssCalculator::SalaryLevels::SIXTH_SALARY_LIMIT = 27938.95
 
-  InssCalculator::SalaryLevels::SEVENTH_SALARY_BASE = 26_666.95
-  InssCalculator::SalaryLevels::SEVENTH_SALARY_LIMIT = 52_000.54
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_BASE = 27938.96
+  InssCalculator::SalaryLevels::SEVENTH_SALARY_LIMIT = 54480.97
 
-  InssCalculator::SalaryLevels::EIGTH_SALARY_BASE = 52_000.55
+  InssCalculator::SalaryLevels::EIGTH_SALARY_BASE = 54480.98
   InssCalculator::SalaryLevels::EIGTH_SALARY_LIMIT = Float::INFINITY
 
 
@@ -74,7 +74,7 @@ InssCalculator providencia as seguintes constantes:
 Desta forma, uma requisição que busca somente a primeira faixa salarial seria:
 
 ```
-YourModel.where("salary <= ?", InssCalculator::FIRST_SALARY_LIMIT)
+  YourModel.where("salary <= ?", InssCalculator::SalaryLevels::FIRST_SALARY_LIMIT)
 ```
 
 ## Decorators
@@ -86,7 +86,7 @@ Você ainda tem acesso à classe original com `#calculator`.
 ```
 calculator = InssCalculator::DiscountPrevidenceCalculator.new(3000)
 text_decorator = InssCalculator::Decorator::Text.new(calculator)
-text_decorator.present => "Com o salário de R$ 3.000,00, sua contribuição é de R$ 258,81. Seu salário líquido, portanto, é de R$ 2.741,19."
+text_decorator.present => "Com o salário de R$ 3.000,00, sua contribuição é de R$ 253,40. Seu salário líquido, portanto, é de R$ 2.746,60."
 
 text_decorator.calculator => InssCalculator::DiscountPrevidenceCalculator.new(3000)
 
@@ -99,8 +99,6 @@ Após investigar os resultados dos exemplos contábeis, concluiu-se que os núme
 Cada faixa salarial trunca seu resultado final após aplicar a sua alíquota correspondente.
 
 Por isso o uso do método `.truncate` ao invés de um arredondamento ao final de cada cálculo parcial.
-
-Para mais detalhes, veja a regra e o exemplo [deste site](https://www.contabilizei.com.br/contabilidade-online/desconto-inss/)
 
 ### Vídeo de apresentação
 
